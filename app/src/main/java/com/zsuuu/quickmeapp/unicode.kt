@@ -1,7 +1,7 @@
 import java.math.BigInteger
 
 fun main(){
-    var text = "0123我爱你abc,.!，。！1230"
+    var text = "0123我爱你abc,.!，。！122230"
     var textt:String= text
 
 
