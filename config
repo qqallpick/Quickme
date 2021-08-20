@@ -1,0 +1,13 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/qqallpick/Quickme.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[remote "origin2"]
+	url = https://github.com/allpick2/Quickme.git
+	fetch = +refs/heads/*:refs/remotes/origin2/*
