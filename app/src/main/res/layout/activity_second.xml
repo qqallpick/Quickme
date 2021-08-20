@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3F51B5"
+        android:gravity="left"
+        android:text="  加 密"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:typeface="normal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3F51B5"
+        android:gravity="left"
+        android:text="     Quickme"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:typeface="serif" />
+
+
+
+
+    <EditText
+        android:id="@+id/gongyaon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入公钥，已默认记住上次公钥"
+        android:inputType="text"
+        android:maxLines="5"
+        android:minLines="1" />
+
+    <EditText
+        android:id="@+id/mingwen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入明文"
+        android:inputType="text"
+        android:maxLines="5"
+        android:minLines="1" />
+    <Button
+        android:id="@+id/button_jiami"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加密明文"/>
+
+    <Button
+        android:id="@+id/button_fuzhimiwen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="复制密文"/>
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="返回"/>
+
+    <TextView
+        android:id="@+id/xianshi_mingwen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#673AB7"
+        android:textSize="10sp"
+        android:textIsSelectable="true"
+        />
+
+
+</LinearLayout>

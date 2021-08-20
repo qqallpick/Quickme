@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+
+
+    <!--    <ProgressBar-->
+    <!--        android:id="@+id/progressBaryuan"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:visibility="invisible"-->
+    <!--        tools:visibility="invisible" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/icon"-->
+    <!--        android:src="@mipmap/ic_launcher"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_height="wrap_content"/>-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3F51B5"
+        android:gravity="left"
+        android:text="  快 密"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:typeface="normal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3F51B5"
+        android:gravity="left"
+        android:text="     Quickme"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:typeface="serif" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/zhishup"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="请输入一个大质数P"-->
+<!--        android:inputType="numberSigned"-->
+<!--        android:maxLines="5"-->
+<!--        android:minLines="1" />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/zhishuq"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:hint="请输入一个大质数Q"-->
+    <!--        android:inputType="numberSigned"-->
+    <!--        android:minLines="1"-->
+    <!--        android:maxLines="5"/>-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/gongyaoe"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:hint="请输入公钥e，建议为65537"-->
+    <!--        android:inputType="numberSigned"-->
+    <!--        android:minLines="1"-->
+    <!--        android:maxLines="5"/>-->
+
+
+
+    <!--    <Button-->
+    <!--        android:id="@+id/button_save"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="保存密钥"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button_fuzhid"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="复制私钥" />-->
+
+
+    <Button
+        android:id="@+id/button_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="进入加密" />
+
+    <Button
+        android:id="@+id/button_nextjie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="进入解密" />
+
+    <!--    <Button-->
+    <!--        android:id="@+id/button_jindutiao"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="进度控制"/>-->
+
+
+    <Button
+        android:id="@+id/button_shengchengmiyao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="生成密钥" />
+
+    <Button
+        android:id="@+id/button_fuzhie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="复制公钥" />
+
+
+    <Button
+        android:id="@+id/button_jinggao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="退出快密" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/xianshi_p"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="center"-->
+    <!--        android:textColor="#00ff00"-->
+    <!--        android:textSize="24sp" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/xianshi_q"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="center"-->
+    <!--        android:textColor="#00ff00"-->
+    <!--        android:textSize="24sp" />-->
+    <TextView
+        android:id="@+id/xianshi_e"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textColor="#9C27B0"
+        android:textIsSelectable="true"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/xianshi_d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textColor="#9C27B0"
+        android:textIsSelectable="true"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/xianshi_n"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textColor="#9C27B0"
+        android:textIsSelectable="true"
+        android:textSize="10sp" />
+
+
+</LinearLayout>
+
