@@ -81,6 +81,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,FourthActivity::class.java)
             startActivity(intent)
         }
+//      页面跳转的按钮，图片加密
+        button_tupian.setOnClickListener{
+            val intent = Intent(this,FifthActivity::class.java)
+            startActivity(intent)
+        }
 
 //        警告界面的按钮，退出按钮
         button_jinggao.setOnClickListener{

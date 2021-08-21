@@ -109,7 +109,11 @@
     <!--        android:layout_height="wrap_content"-->
     <!--        android:text="进度控制"/>-->
 
-
+    <Button
+        android:id="@+id/button_tupian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加密图片" />
     <Button
         android:id="@+id/button_shengchengmiyao"
         android:layout_width="match_parent"
