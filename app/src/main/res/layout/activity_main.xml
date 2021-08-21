@@ -85,18 +85,23 @@
 <!--        android:layout_height="wrap_content"-->
 <!--        android:text="复制私钥" />-->
 
+    <Button
+        android:id="@+id/button_howtouse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用方法" />
 
     <Button
         android:id="@+id/button_next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="进入加密" />
+        android:text="加　　密" />
 
     <Button
         android:id="@+id/button_nextjie"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="进入解密" />
+        android:text="解　　密" />
 
     <!--    <Button-->
     <!--        android:id="@+id/button_jindutiao"-->
@@ -123,6 +128,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="退出快密" />
+
+
+    <TextView
+        android:id="@+id/quickme_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:textColor="#000000"
+        android:textIsSelectable="true"
+        android:textSize="9sp" />
+
+
 
     <!--    <TextView-->
     <!--        android:id="@+id/xianshi_p"-->

@@ -24,130 +24,76 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        把存好的数据返回回来
-//        val inputText = load()
-//        if (inputText.isNotEmpty()){
-//            zhishup.setText(inputText)
-//            zhishup.setSelection(inputText.length)
-//            Toast.makeText(this, "有存好的默认数据", Toast.LENGTH_SHORT).show()
-//        }
-
+        quickme_version.setText("版本号：V1.2　")
 //        生成密钥的按钮
         button_shengchengmiyao.setOnClickListener{
-//            接收edittext的数据
-//            try{
-//                var inputp = BigInteger(zhishup.editableText.toString())
-//                var inputq = BigInteger(zhishuq.editableText.toString())
-//                Toast.makeText(this, "生成密钥中P:"+inputp+"Q:"+inputq+"e:65537", Toast.LENGTH_SHORT).show()
-//                xianshi_p.setText("大质数P:"+inputp)
-//                xianshi_q.setText("大质数Q:"+inputq)
-//                xianshi_e.setText("公钥e:65537")
-//                var d = mainshengcheng(inputp,inputq)
-//                xianshi_d.setText("私钥d:"+d)
-//                var n = qium(inputp,inputq)
-//                xianshi_n.setText("公模n:"+n)
-//            }catch (e:IOException){
-//                e.printStackTrace()
-//            }
-//            非空edittext的判断
-//            if(!(zhishup.getText().toString().equals("")) && !(zhishuq.getText().toString().equals(""))){
-//            进度条开始
-//            progressBaryuan.visibility = View.VISIBLE
             Toast.makeText(this, "密钥生成中，请等候1-3秒", Toast.LENGTH_SHORT).show()
+//            生成大质数P、Q
             var ran = Random()
             var inputp = BigInteger.probablePrime(1700, ran)
             var inputq = BigInteger.probablePrime(1700, ran)
-//                var inputp = BigInteger(zhishup.editableText.toString())
-//                var inputq = BigInteger(zhishuq.editableText.toString())
-            Toast.makeText(this, "密钥生成完毕", Toast.LENGTH_SHORT).show()
-//                xianshi_p.setText("大质数P:"+inputp)
-//                xianshi_q.setText("大质数Q:"+inputq)
+//            默认公钥e：65537，为公认加密标准
             xianshi_e.setText("公钥e:65537")
+//            生成私钥d
             var d = mainshengcheng(inputp,inputq)
             xianshi_d.setText("私钥d:"+d.toString(36))
+//            生成模n
             var n = qium(inputp,inputq)
             xianshi_n.setText("公模n:"+n.toString(36))
-//            }else{
-//                Toast.makeText(this, "防止空指针，请输入数据", Toast.LENGTH_SHORT).show()}
-//            进度条消失
-//            progressBaryuan.visibility = View.GONE
-//            存储e\d\n保存
+            Toast.makeText(this, "密钥生成完毕", Toast.LENGTH_SHORT).show()
+//            存储e、d、n保存
             val editor = getSharedPreferences("data",Context.MODE_PRIVATE).edit()
             editor.putString("e", "65537")
+//            为了减少密钥长度采用36进制保存数据
             editor.putString("d", d.toString(36))
             editor.putString("n", n.toString(36))
             editor.apply()
         }
 
-//保存密钥
-
-//        button_save.setOnClickListener{
-//            val editor = getSharedPreferences("data",Context.MODE_PRIVATE).edit()
-//            editor.putString("name", "Tom")
-//            editor.putInt("age", 28)
-//            editor.putBoolean("married", false)
-//            editor.apply()
-//        }
-
-//复制公钥和私钥的按钮
+//          复制公钥按钮
         button_fuzhie.setOnClickListener{
 //            读取保存好的数据
             val prefs = getSharedPreferences("data", Context.MODE_PRIVATE)
             val namee =  prefs.getString("e","kongdata")
-//            val named =  prefs.getString("d","kongdata")
             val namen =  prefs.getString("n","kongdata")
             val array: Array<String?> = arrayOf( namee , namen )
-//            var gongyao: String? = (namee,namen)
 //            复制到剪贴板
             var clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-//            把array[1]转为16进制
+//            array[1] = namen, 公钥e默认为65537，所以不用复制了
             var clipData = ClipData.newPlainText("Label", array[1])
             clipboardManager.setPrimaryClip(clipData)
             Toast.makeText(this, "公钥复制成功", Toast.LENGTH_SHORT).show()
         }
 
-//        button_fuzhid.setOnClickListener{
-//            //            读取保存好的数据
-//            val prefs = getSharedPreferences("data", Context.MODE_PRIVATE)
-//            val namee =  prefs.getString("e","kong")
-//            val named =  prefs.getString("d","kong")
-//            val namen =  prefs.getString("n","kong")
-//            val array: Array<String?> = arrayOf( named , namen)
-//            var clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-//            var clipData = ClipData.newPlainText("Label", array[1])
-//            clipboardManager.setPrimaryClip(clipData)
-//            Toast.makeText(this, "私钥复制成功", Toast.LENGTH_SHORT).show()
-//        }
-
-
-//        页面跳转的按钮
+//        页面跳转的按钮，进入加密
         button_next.setOnClickListener{
             val intent = Intent(this,SecondActivity::class.java)
             startActivity(intent)
         }
-        //        页面跳转的按钮
+
+//        页面跳转的按钮，进入解密
         button_nextjie.setOnClickListener{
             val intent = Intent(this,ThirdActivity::class.java)
             startActivity(intent)
         }
-//        进度条按钮
-//        button_jindutiao.setOnClickListener{
-//            if(progressBaryuan.visibility == View.VISIBLE){progressBaryuan.visibility = View.GONE}
-//            else{progressBaryuan.visibility = View.VISIBLE}
-//        }
-//        警告界面的按钮
+//      页面跳转的按钮，使用说明
+        button_howtouse.setOnClickListener{
+            val intent = Intent(this,FourthActivity::class.java)
+            startActivity(intent)
+        }
+
+//        警告界面的按钮，退出按钮
         button_jinggao.setOnClickListener{
             AlertDialog.Builder(this).apply{
                 setTitle("退出快密")
                 setMessage("请问您确定要退出快密吗?")
                 setCancelable(false)
                 setPositiveButton("退出"){dialog,which ->finish()}
-                setNegativeButton("不退出"){dialog,which ->}
+                setNegativeButton("继续使用"){dialog,which ->}
                 show()
             }
         }
     }
-
 
 //    欧几里得算法
     private fun gcd(a:Int ,b: Int): Int {
@@ -159,6 +105,8 @@ class MainActivity : AppCompatActivity() {
             return gcd(b,  bb)
         }
     }
+
+//    扩展欧几里得算法
     private fun extGcd(a :Int, b:Int): IntArray {
         if(b.equals(0)){
             var x1 = 1
@@ -181,17 +129,15 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+//    求私钥
     fun mainshengcheng(p: BigInteger, q: BigInteger): BigInteger {
-        // 公钥私钥中用到的两个大质数p,q'''
-//        "9062533795040332573828165676041420023923186629816064310889114191774242267509558224186412730341985526369762970541027092793448798602094649082837146502664467") ;
-//        var q = BigInteger("8237979010845221321728170991711087677301781331097941496040295750873700896540126571402847199863674669421668134439033787351471915843830789790454964600714787") ;
         println("p:" + p)
         println("q:" + q)
 //    求公模
         var n = qium(p, q)
         println("n:" + n)
         var d = genkey(p, q)
-//        大数比较
+//    大数比较，需要补一次数据
         if(d.compareTo(BigInteger.ZERO)==-1){
             var dd = d+ qiufy(p,q)
             println("d:" + dd)
@@ -200,7 +146,6 @@ class MainActivity : AppCompatActivity() {
         else{
             return  d
         }
-
     }
 
     //求公模
@@ -232,7 +177,7 @@ class MainActivity : AppCompatActivity() {
         return d
     }
 
-    //欧几里得算法
+    //拓展欧几里得算法
     fun extGcd(a: BigInteger, b: BigInteger): Array<BigInteger> {
         if(b.equals(BigInteger.ZERO)){
             var x1 = BigInteger.ONE
@@ -266,18 +211,19 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
-            R.id.set_item -> Toast.makeText(this, "add", Toast.LENGTH_SHORT).show()
-            R.id.tell_item -> Toast.makeText(this, "remove", Toast.LENGTH_SHORT).show()
-        }
-        return true
-    }
+//    菜单功能，先在先放在这里，以后再弄
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        menuInflater.inflate(R.menu.main, menu)
+//        return true
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        when(item.itemId){
+//            R.id.set_item -> Toast.makeText(this, "add", Toast.LENGTH_SHORT).show()
+//            R.id.tell_item -> Toast.makeText(this, "remove", Toast.LENGTH_SHORT).show()
+//        }
+//        return true
+//    }
 
 
 }
