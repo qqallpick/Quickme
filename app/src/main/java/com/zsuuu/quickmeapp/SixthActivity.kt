@@ -16,7 +16,7 @@ import android.graphics.Matrix
 import android.media.ExifInterface
 import kotlinx.android.synthetic.main.activity_fifth.*
 
-class FifthActivity : AppCompatActivity() {
+class SixthActivity : AppCompatActivity() {
 
     val takePhoto = 1
     val fromAlbum = 2
@@ -70,11 +70,11 @@ class FifthActivity : AppCompatActivity() {
         }
 
 
- //       加密图片图片按钮
+        //       加密图片图片按钮
         button_backfifth.setOnClickListener {
             finish()
         }
- //       导出发送按钮
+        //       导出发送按钮
         button_backfifth.setOnClickListener {
             finish()
         }

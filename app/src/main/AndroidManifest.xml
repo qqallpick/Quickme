@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Quickmeapp">
-        <activity android:name=".FifthActivity"></activity>
+        <activity android:name=".SixthActivity"></activity>
+        <activity android:name=".FifthActivity" />
         <activity android:name=".FourthActivity" />
         <activity android:name=".ThirdActivity" />
         <activity android:name=".SecondActivity" />
@@ -22,6 +23,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.cameraalbumtest.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

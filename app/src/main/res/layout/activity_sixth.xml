@@ -56,14 +56,14 @@
         android:layout_height="wrap_content"
         android:text="返回"/>
 
-<!--    <TextView-->
-<!--        android:id="@+id/xianshi_mingwen"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:gravity="left"-->
-<!--        android:textColor="#673AB7"-->
-<!--        android:textIsSelectable="true"-->
-<!--        android:textSize="10sp" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/xianshi_mingwen"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="left"-->
+    <!--        android:textColor="#673AB7"-->
+    <!--        android:textIsSelectable="true"-->
+    <!--        android:textSize="10sp" />-->
 
     <ImageView
         android:id="@+id/imageView"
