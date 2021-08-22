@@ -22,7 +22,7 @@ class ThirdActivity : AppCompatActivity() {
         }
 //解密按钮
         button_jiemi.setOnClickListener {
-            Toast.makeText(this, "解密密文中", Toast.LENGTH_SHORT).show()
+
 //            读取数据自己的私钥d，n
             val prefs = getSharedPreferences("data", Context.MODE_PRIVATE)
             val d =  BigInteger(prefs.getString("d","kongdata"),36)
@@ -30,19 +30,23 @@ class ThirdActivity : AppCompatActivity() {
 //            接收密文
 //            var inputmi = BigInteger(miwen3.editableText.toString())
             var mimiwen = miwen3.editableText.toString()
-            var inputmi = BigInteger(mimiwen,36)
-            var rr = decrypt(inputmi,d,n)
+            if(mimiwen.length == 0){
+                Toast.makeText(this, "未输入密文！", Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(this, "解密密文中", Toast.LENGTH_SHORT).show()
+                var inputmi = BigInteger(mimiwen,36)
+                var rr = decrypt(inputmi,d,n)
 //            显示在屏幕上
-            var mingwenrr = rr.toString()
-            var rrr = zifuchuanzhuanhuan(mingwenrr)
-            xianshi_miwen.setText(rrr)
-            Toast.makeText(this, "解密成功", Toast.LENGTH_SHORT).show()
+                var mingwenrr = rr.toString()
+                var rrr = zifuchuanzhuanhuan(mingwenrr)
+                xianshi_miwen.setText(rrr)
+                Toast.makeText(this, "解密成功", Toast.LENGTH_SHORT).show()
 //            保存了明文的内容
 //            val editor = getSharedPreferences("data", Context.MODE_PRIVATE).edit()
 //            editor.putString("fuzhimingwen", rr.toString())
 //            editor.apply()
+            }
         }
-
     }
     //解密过程和加密过程是一样的
      fun decrypt(m:BigInteger, d:BigInteger, n:BigInteger): BigInteger {

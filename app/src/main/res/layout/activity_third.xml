@@ -61,11 +61,10 @@
         android:id="@+id/xianshi_miwen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:gravity="left"
         android:textColor="#673AB7"
-        android:textSize="24sp"
         android:textIsSelectable="true"
-        />
+        android:textSize="24sp" />
 
 
 </LinearLayout>
