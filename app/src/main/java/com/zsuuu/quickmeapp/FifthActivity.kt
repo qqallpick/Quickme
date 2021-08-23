@@ -15,6 +15,7 @@ import android.graphics.Bitmap
 import android.graphics.Matrix
 import android.media.ExifInterface
 import kotlinx.android.synthetic.main.activity_fifth.*
+import kotlinx.android.synthetic.main.activity_second.*
 
 class FifthActivity : AppCompatActivity() {
 
@@ -44,6 +45,8 @@ class FifthActivity : AppCompatActivity() {
             val intent = Intent("android.media.action.IMAGE_CAPTURE")
             intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri)
             startActivityForResult(intent, takePhoto)
+//            var aaaa = startActivityForResult(intent, takePhoto)
+//            wenjianid.setText(aaaa.toString())
         }
 //        从相册导入照片
         fromAlbumBtn.setOnClickListener {
@@ -53,6 +56,8 @@ class FifthActivity : AppCompatActivity() {
             // 指定只显示照片
             intent.type = "image/*"
             startActivityForResult(intent, fromAlbum)
+//            var bbbb = startActivityForResult(intent, fromAlbum)
+//            wenjianid.setText(bbbb.toString())
         }
 
 //        导入图片按钮

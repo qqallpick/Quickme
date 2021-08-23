@@ -64,6 +64,14 @@
 <!--        android:textColor="#673AB7"-->
 <!--        android:textIsSelectable="true"-->
 <!--        android:textSize="10sp" />-->
+    <TextView
+        android:id="@+id/wenjianid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textColor="#673AB7"
+        android:textIsSelectable="true"
+        android:textSize="10sp" />
 
     <ImageView
         android:id="@+id/imageView"
