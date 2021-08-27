@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-
-
+    android:layout_height="match_parent">
 
 
     <!--    <ProgressBar-->
@@ -25,33 +23,41 @@
     <!--        android:layout_gravity="center"-->
     <!--        android:layout_height="wrap_content"/>-->
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/textView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="#3F51B5"
         android:gravity="left"
         android:text="  快 密"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
-        android:typeface="normal" />
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="#3F51B5"
         android:gravity="left"
         android:text="     Quickme"
         android:textColor="#FFFFFF"
         android:textSize="15sp"
-        android:typeface="serif" />
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-<!--    <EditText-->
-<!--        android:id="@+id/zhishup"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:hint="请输入一个大质数P"-->
-<!--        android:inputType="numberSigned"-->
-<!--        android:maxLines="5"-->
-<!--        android:minLines="1" />-->
+    <!--    <EditText-->
+    <!--        android:id="@+id/zhishup"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:hint="请输入一个大质数P"-->
+    <!--        android:inputType="numberSigned"-->
+    <!--        android:maxLines="5"-->
+    <!--        android:minLines="1" />-->
 
     <!--    <EditText-->
     <!--        android:id="@+id/zhishuq"-->
@@ -72,36 +78,17 @@
     <!--        android:maxLines="5"/>-->
 
 
-
     <!--    <Button-->
     <!--        android:id="@+id/button_save"-->
     <!--        android:layout_width="match_parent"-->
     <!--        android:layout_height="wrap_content"-->
     <!--        android:text="保存密钥"/>-->
 
-<!--    <Button-->
-<!--        android:id="@+id/button_fuzhid"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="复制私钥" />-->
-
-    <Button
-        android:id="@+id/button_howtouse"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="使用方法" />
-
-    <Button
-        android:id="@+id/button_next"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="加密文字" />
-
-    <Button
-        android:id="@+id/button_nextjie"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="解密文字" />
+    <!--    <Button-->
+    <!--        android:id="@+id/button_fuzhid"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="复制私钥" />-->
 
     <!--    <Button-->
     <!--        android:id="@+id/button_jindutiao"-->
@@ -110,46 +97,121 @@
     <!--        android:text="进度控制"/>-->
 
     <Button
-        android:id="@+id/button_jiamitupian"
-        android:layout_width="match_parent"
+        android:id="@+id/button_howtouse"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
-        android:text="加密图片" />
+        android:text="使用方法"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/button_nextjie"
+        android:layout_width="206dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:text="解密文字"
+        app:layout_constraintStart_toEndOf="@+id/button_next"
+        app:layout_constraintTop_toBottomOf="@+id/button_howtouse" />
 
     <Button
         android:id="@+id/button_jiemitupian"
-        android:layout_width="match_parent"
+        android:layout_width="206dp"
         android:layout_height="wrap_content"
-        android:text="解密图片" />
+        android:text="解密图片"
+        app:layout_constraintStart_toEndOf="@+id/button_jiamitupian"
+        app:layout_constraintTop_toBottomOf="@+id/button_nextjie" />
+
+    <Button
+        android:id="@+id/button_next"
+        android:layout_width="206dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:text="加密文字"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_howtouse" />
+
+    <Button
+        android:id="@+id/button_jiamitupian"
+        android:layout_width="206dp"
+        android:layout_height="wrap_content"
+        android:text="加密图片"
+        app:layout_constraintTop_toBottomOf="@+id/button_next"
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/button_shengchengmiyao"
-        android:layout_width="match_parent"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
-        android:text="生成密钥" />
-
-    <Button
-        android:id="@+id/button_fuzhie"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="复制公钥" />
-
-
-    <Button
-        android:id="@+id/button_jinggao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="退出快密" />
-
+        android:layout_marginTop="8dp"
+        android:text="生成密钥"
+        app:layout_constraintTop_toBottomOf="@+id/button_jiamitupian"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/quickme_version"
-        android:layout_width="match_parent"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:gravity="right"
         android:textColor="#000000"
         android:textIsSelectable="true"
-        android:textSize="9sp" />
+        android:textSize="9sp"
+        app:layout_constraintTop_toBottomOf="@+id/button_jinggao"
+        tools:layout_editor_absoluteX="0dp" />
 
+    <TextView
+        android:id="@+id/xianshi_e"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="left"
+        android:textColor="#555555"
+        android:textIsSelectable="true"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/quickme_version"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/button_jinggao"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="退出快密"
+        app:layout_constraintTop_toBottomOf="@+id/button_fuzhie"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/xianshi_d"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="left"
+        android:textColor="#555555"
+        android:textIsSelectable="true"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/xianshi_e"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/button_fuzhie"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="复制公钥"
+        app:layout_constraintTop_toBottomOf="@+id/button_shengchengmiyao"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/xianshi_n"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="left"
+        android:textColor="#555555"
+        android:textIsSelectable="true"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/xianshi_d"
+        tools:layout_editor_absoluteX="0dp" />
 
 
     <!--    <TextView-->
@@ -167,33 +229,7 @@
     <!--        android:gravity="center"-->
     <!--        android:textColor="#00ff00"-->
     <!--        android:textSize="24sp" />-->
-    <TextView
-        android:id="@+id/xianshi_e"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="left"
-        android:textColor="#9C27B0"
-        android:textIsSelectable="true"
-        android:textSize="10sp" />
-
-    <TextView
-        android:id="@+id/xianshi_d"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="left"
-        android:textColor="#9C27B0"
-        android:textIsSelectable="true"
-        android:textSize="10sp" />
-
-    <TextView
-        android:id="@+id/xianshi_n"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="left"
-        android:textColor="#9C27B0"
-        android:textIsSelectable="true"
-        android:textSize="10sp" />
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
