@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        quickme_version.setText("版本号：V1.2　")
+        quickme_version.setText("版本号：v1.2　")
 //        生成密钥的按钮
         button_shengchengmiyao.setOnClickListener{
             Toast.makeText(this, "密钥生成中，请等候1-3秒", Toast.LENGTH_SHORT).show()
