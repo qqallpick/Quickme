@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-//        警告界面的按钮，退出按钮
+//      警告界面的按钮，退出按钮
         button_jinggao.setOnClickListener{
             AlertDialog.Builder(this).apply{
                 setTitle("退出快密")
