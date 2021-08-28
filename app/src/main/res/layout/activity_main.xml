@@ -175,7 +175,6 @@
         android:id="@+id/button_jinggao"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:text="退出快密"
         app:layout_constraintTop_toBottomOf="@+id/button_fuzhie"
         tools:layout_editor_absoluteX="0dp" />
@@ -196,7 +195,6 @@
         android:id="@+id/button_fuzhie"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:text="复制公钥"
         app:layout_constraintTop_toBottomOf="@+id/button_shengchengmiyao"
         tools:layout_editor_absoluteX="0dp" />

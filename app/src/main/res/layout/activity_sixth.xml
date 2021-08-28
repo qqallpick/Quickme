@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:background="#3F51B5"
         android:gravity="left"
-        android:text="  图片加密"
+        android:text="  图片解密"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         android:typeface="normal" />
@@ -23,33 +23,7 @@
         android:textColor="#FFFFFF"
         android:textSize="15sp"
         android:typeface="serif" />
-
-    <Button
-        android:id="@+id/button_takePhotoBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="拍摄图片"/>
-
-    <Button
-        android:id="@+id/fromAlbumBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="相册导入"/>
-
-
-
-    <Button
-        android:id="@+id/button_jiamitupian"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="加密图片"/>
-
-    <Button
-        android:id="@+id/button_daochufasong"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="导出发送"/>
-
+    
     <Button
         android:id="@+id/button_backfifth"
         android:layout_width="match_parent"

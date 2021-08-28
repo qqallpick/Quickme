@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Quickmeapp">
-        <activity android:name=".SixthActivity"></activity>
+        <activity android:name=".SixthActivity"/>
         <activity android:name=".FifthActivity" />
         <activity android:name=".FourthActivity" />
         <activity android:name=".ThirdActivity" />
